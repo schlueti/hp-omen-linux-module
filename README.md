@@ -14,6 +14,18 @@ Currently working:
 
 ## Installation
 
+First at all, since Linux Kernel 5.16 the DKMS tree already contains: hp-omen-wmi-0.9
+
+So to install this repo you need to force the installation so the files in `/sys/devices/platform/hp-wmi/rgb_zones/` are created.
+
+1. sudo dkms install -m hp-omen-wmi/0.9 --force
+
+2. Reboot
+
+---------------------------------------------
+
+If you using Kernel lower 5.16 follow the instructions below.
+
 1. Install dkms and kernel headers if needed (already present on Ubuntu)
 
 1. Run `sudo make install`
